@@ -1,5 +1,7 @@
 ## Subnautica Mods by Deathtruth
 
+https://www.nexusmods.com/users/322152?tab=user+files
+
 # Adjustable Fire Extinguisher
 - Allows you to adjust the output of the fire extinguisher
 - Useful for getting to the surface quickly and escaping agressive creatures
