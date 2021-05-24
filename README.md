@@ -11,3 +11,11 @@ https://www.nexusmods.com/users/322152?tab=user+files
 - Supports Version Checker by Tobey Blaber
 
 This is my first subnautica mod so please give me feedback!
+
+# No Rebreather Sounds
+- Removes the annoying/frightening distant horn sound which comes from the player's rebreather.
+
+Here is a video of the sound:
+https://www.youtube.com/watch?v=8faf48DYUck
+
+This mod removes it.
