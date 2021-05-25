@@ -19,3 +19,7 @@ Here is a video of the sound:
 https://www.youtube.com/watch?v=8faf48DYUck
 
 This mod removes it.
+
+# Silent Walking
+-Mod options allow you to enable/disable walking sounds your character makes when walking on metal (inside habitats) on land and on Precursor surfaces. 
+-Options can be changed in game at any time using the mod config menu. No restart required.
