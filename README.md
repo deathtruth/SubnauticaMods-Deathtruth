@@ -21,9 +21,9 @@ https://www.youtube.com/watch?v=8faf48DYUck
 This mod removes it.
 
 # Silent Walking
--Mod options allow you to enable/disable walking sounds your character makes when walking on metal (inside habitats) on land and on Precursor surfaces. 
--Options can be changed in game at any time using the mod config menu. No restart required.
+- Mod options allow you to enable/disable walking sounds your character makes when walking on metal (inside habitats) on land and on Precursor surfaces. 
+- Options can be changed in game at any time using the mod config menu. No restart required.
 
 # Silent Base Ambience
--Mute the scanner room ambient background music via the ingame menu/config file.
--Mute the generic "indoor sounds" you hear in the habitat via the ingame menu/config file.
+- Mute the scanner room ambient background music via the ingame menu/config file.
+- Mute the generic "indoor sounds" you hear in the habitat via the ingame menu/config file.
