@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\ScannerRoomMusic\ScannerRoomMusic.dll
+C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\ScannerRoomMusic\ScannerRoomMusic.pdb
+C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\ScannerRoomMusic\obj\Debug\ScannerRoomMusic.csproj.CoreCompileInputs.cache
+C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\ScannerRoomMusic\obj\Debug\ScannerRoomMusic.dll
+C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\ScannerRoomMusic\obj\Debug\ScannerRoomMusic.pdb
+C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\ScannerRoomMusic\obj\Debug\ScannerRoomMusic.csprojAssemblyReference.cache
