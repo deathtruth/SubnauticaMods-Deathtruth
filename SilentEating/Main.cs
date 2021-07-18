@@ -4,7 +4,7 @@ using QModManager.API.ModLoading;
 using QModManager.Utility;
 using SMLHelper.V2.Handlers;
 
-namespace SilentBaseAmbience
+namespace SilentEating
 {
     [QModCore]
     public class Main
@@ -15,11 +15,11 @@ namespace SilentBaseAmbience
         [QModPatch]
         public static void Load()
         {
-            Logger.Log(Logger.Level.Debug, "Deathtruth Silent Base Ambience patching");
+            Logger.Log(Logger.Level.Debug, "Deathtruth Silent Eating patching");
 
             Harmony.CreateAndPatchAll(myAssembly, $"Deathtruth_{myAssembly.GetName().Name}");
             Config = OptionsPanelHandler.Main.RegisterModOptions<MyConfig>();
-       
+
             Logger.Log(Logger.Level.Info, "Patched successfully!");
         }
     }

@@ -1,5 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\SilentBaseAmbience\SilentBaseAmbience.dll
-C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\SilentBaseAmbience\SilentBaseAmbience.pdb
-C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\SilentBaseAmbience\obj\Debug\SilentBaseAmbience.csproj.CoreCompileInputs.cache
-C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\SilentBaseAmbience\obj\Debug\SilentBaseAmbience.dll
-C:\Unity3D_Projects\Subnautica Modding\Visualstudio\SubnauticaMods\SilentBaseAmbience\obj\Debug\SilentBaseAmbience.pdb

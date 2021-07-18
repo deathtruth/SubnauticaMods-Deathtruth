@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01859E4B-60A5-44B3-A9E0-8386EAB7A4D8}</ProjectGuid>
+    <ProjectGuid>{5273A35A-16E4-4E95-9BDD-089B263315D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SilentBaseAmbience</RootNamespace>
-    <AssemblyName>SilentBaseAmbience</AssemblyName>
+    <RootNamespace>SilentEating</RootNamespace>
+    <AssemblyName>SilentEating</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -17,11 +17,10 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Subnautica\QMods\SilentBaseAmbience\</OutputPath>
+    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Subnautica\QMods\SilentEating\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
