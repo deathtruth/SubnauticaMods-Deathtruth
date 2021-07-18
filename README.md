@@ -25,5 +25,12 @@ This mod removes it.
 - Options can be changed in game at any time using the mod config menu. No restart required.
 
 # Silent Base Ambience
-- Mute the scanner room ambient background music via the ingame menu/config file.
-- Mute the generic "indoor sounds" you hear in the habitat via the ingame menu/config file.
+Mute/unmute the following sounds via the ingame menu/config file:
+
+- Scanner room ambient background music
+- Generic "indoor sounds" you hear in the habitat
+- Water filtration machine running sound
+- Background biome ambience sounds while inside the habitat (Useful when you mute the "indoor sounds" as these become much louder and more prominent)
+
+# Silent Eating
+This mod will allow you to change the eating sound in the mod menu if you prefer, otherwise you can choose no sound at all.
