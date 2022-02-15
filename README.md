@@ -13,7 +13,7 @@ https://www.nexusmods.com/users/322152?tab=user+files
 This is my first subnautica mod so please give me feedback!
 
 # No Rebreather Sounds
-- Removes the annoying/frightening distant horn sound which comes from the player's rebreather.
+- Removes the annoying/frightening distant horn sound which comes from the player's breathing apparatus.
 
 Here is a video of the sound:
 https://www.youtube.com/watch?v=8faf48DYUck
@@ -31,6 +31,7 @@ Mute/unmute the following sounds via the ingame menu/config file:
 - Generic "indoor sounds" you hear in the habitat
 - Water filtration machine running sound
 - Background biome ambience sounds while inside the habitat (Useful when you mute the "indoor sounds" as these become much louder and more prominent)
+- Reefback sounds (slider options to individually control the volume when indoors and outdoors)
 
 # Silent Eating
 This mod will allow you to change the eating sound in the mod menu if you prefer, otherwise you can choose no sound at all.

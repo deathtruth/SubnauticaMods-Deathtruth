@@ -71,10 +71,27 @@ namespace SilentBaseAmbience
 	public static class Player_UpdateIsUnderwater_Patch
 	{
 
+		public static bool playerInside;
+
 		[HarmonyPostfix]
 		private static void Postfix(Player __instance)
 		{
-			Main.Config.OnChangeBackgroundSounds();
+			Main.Config.UpdateIsUnderwater();
+		}
+	}
+
+	[HarmonyPatch(typeof(Creature), "Start")]
+	public static class Creature_Start_Patch
+	{
+		public static List<Reefback> reefbackList = new List<Reefback>();
+
+		[HarmonyPostfix]
+		private static void Postfix(Creature __instance)
+		{
+            if (__instance.GetComponentInParent<Reefback>()) //Creature instance is of type Reefback
+            {
+				reefbackList.Add(__instance.GetComponentInParent<Reefback>());
+			}
 		}
 	}
 }
