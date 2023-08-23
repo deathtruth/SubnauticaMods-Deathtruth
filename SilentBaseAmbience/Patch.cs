@@ -7,26 +7,48 @@ namespace SilentBaseAmbience
 	[HarmonyPatch(typeof(MapRoomFunctionality), "Start")]
 	public static class MapRoomFunctionality_Start_Patch
 	{
-		public static List<MapRoomFunctionality> MapRoomFunctionalityList = new List<MapRoomFunctionality>();
+
+		public static List<MapRoomFunctionality> mapRoomList = new List<MapRoomFunctionality>();
 
 		[HarmonyPostfix]
 		private static void Postfix(MapRoomFunctionality __instance)
 		{
-			MapRoomFunctionalityList.Add(__instance);
-			Main.Config.OnChangeScannerRoom();
+			if (Main.Config.muteScannerRoom)
+			{
+				__instance.ambientSound.Stop();
+			}
+			mapRoomList.Add(__instance);
 		}
 	}
 
 	[HarmonyPatch(typeof(Base), "Start")]
 	public static class Base_Start_Patch
 	{
-		public static List<GameObject> InsideSoundsList = new List<GameObject>();
+		public static List<GameObject> insideSoundsList = new List<GameObject>();
 
 		[HarmonyPostfix]
 		private static void Postfix(Base __instance)
 		{
-			InsideSoundsList.Add(__instance.gameObject.FindChild("insideSounds"));
+			insideSoundsList.Add(__instance.gameObject.FindChild("insideSounds"));
 			Main.Config.OnChangeInsideSounds();
+		}
+	}
+
+	[HarmonyPatch(typeof(MapRoomFunctionality), "Update")]
+	public static class MapRoomFunctionality_Update_Patch
+	{
+
+		[HarmonyPostfix]
+		private static void Postfix(MapRoomFunctionality __instance)
+		{
+            if (Main.Config.muteScannerRoom && __instance.ambientSound.playing)
+            {
+				__instance.ambientSound.Stop();
+            }
+			else if (!Main.Config.muteScannerRoom && !__instance.ambientSound.playing && (__instance.CheckIsPowered() || __instance.forcePoweredIfNoRelay))
+            {
+				__instance.ambientSound.Play();
+			}
 		}
 	}
 
@@ -84,13 +106,68 @@ namespace SilentBaseAmbience
 	public static class Creature_Start_Patch
 	{
 		public static List<Reefback> reefbackList = new List<Reefback>();
+		//public static List<SandShark> sandSharkList = new List<SandShark>();
+		public static List<Stalker> stalkerList = new List<Stalker>();
+		public static List<GasoPod> gasoPodList = new List<GasoPod>();
 
 		[HarmonyPostfix]
 		private static void Postfix(Creature __instance)
 		{
-            if (__instance.GetComponentInParent<Reefback>()) //Creature instance is of type Reefback
+            if (__instance.GetComponentInParent<Reefback>())
             {
 				reefbackList.Add(__instance.GetComponentInParent<Reefback>());
+				if (Player_Start_Patch.playerObj != null && Player_Start_Patch.playerObj.IsInBase())
+				{
+					Main.Config.ChangeReefbackVolume(Main.Config.reefbackVolumeInside);
+				}
+                else
+                {
+					Main.Config.ChangeReefbackVolume(Main.Config.reefbackVolumeOutside);
+				}
+			}
+			/*if (__instance.GetComponentInParent<SandShark>())
+			{
+				sandSharkList.Add(__instance.GetComponentInParent<SandShark>());
+				if (Player_Start_Patch.playerObj.IsInBase())
+				{
+					Main.Config.ChangeSandSharkVolume(Main.Config.sandSharkVolumeInside);
+				}
+				else
+				{
+					Main.Config.ChangeSandSharkVolume(Main.Config.sandSharkVolumeOutside);
+				}
+			}*/
+			if (__instance.GetComponentInParent<Stalker>())
+			{
+				stalkerList.Add(__instance.GetComponentInParent<Stalker>());
+				if (Player_Start_Patch.playerObj != null && Player_Start_Patch.playerObj.IsInBase())
+				{
+					Main.Config.ChangeStalkerVolume(Main.Config.stalkerVolumeInside);
+				}
+				else
+				{
+					Main.Config.ChangeStalkerVolume(Main.Config.stalkerVolumeOutside);
+				}
+			}
+			if (__instance.GetComponentInParent<GasoPod>())
+			{
+				gasoPodList.Add(__instance.GetComponentInParent<GasoPod>());
+				Main.Config.OnchangeGasoPodSounds();
+			}
+		}
+	}
+
+	[HarmonyPatch(typeof(GasPod), "Start")]
+	public static class GasPod_Start_Patch
+	{
+
+		[HarmonyPrefix]
+		private static void Prefix(GasPod __instance)
+		{
+			if ((Main.Config.muteGasoPodSoundsOutside && !Player_Start_Patch.playerObj.IsInBase()) || (Main.Config.muteGasoPodSoundsInside && Player_Start_Patch.playerObj.IsInBase()))
+			{
+				__instance.releaseSound = null;
+				__instance.burstSound = null;
 			}
 		}
 	}
